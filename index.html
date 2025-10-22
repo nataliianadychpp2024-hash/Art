@@ -21,14 +21,14 @@
       font-size: 52px;
       opacity: 0;
       transform: translateY(20px);
-      animation: fadeUp 1s ease forwards;
+      animation: fadeUp 3s ease forwards;
     }
     p {
       font-size: 30px;
       font-weight: 300;
       opacity: 0;
       transform: translateY(20px);
-      animation: fadeUp 1s ease forwards;
+      animation: fadeUp 4s ease forwards;
     }
 
     header {
@@ -42,7 +42,7 @@
       margin-right: 10px;
       opacity: 0;
       transform: translateY(20px);
-      animation: fadeUp 1s ease forwards;
+      animation: fadeUp 3s ease forwards;
     }
     header h1 {
       font-size: 55px;
@@ -92,7 +92,7 @@
 
     .list{
         list-style:none;
-        padding:0;
+        margin-bottom: 15px;
     }
     .list li{
         display: flex;
@@ -106,7 +106,29 @@
       from {opacity: 0; transform: translateY(20px);}
       to {opacity: 1; transform: translateY(0);}
     }
-  
+
+    .kar {
+      position: relative;
+      width:500;
+      height: 300;
+      overflow: hidden;
+      margin: 50px;
+      border:3px solid #333;
+      border-radius: 15px;
+    }
+    .slide {
+      width: 100%;
+      height: 100%;
+      display:flex;
+      transition: transform 1s ease-in-out;
+    }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    
   </style>
 </head>
 <body>
@@ -135,6 +157,28 @@
         <img src="/Art/img/Spring (Alphonse Mucha, 1896).jpg" alt="Spring (Alphonse Mucha, 1896)">
       </div>
     </div>
+    <div class="kar">
+      <div classs="slide">
+        <img src="/Art/img/Monet Water Lilies.jpg" alt="S">
+        <img src="/Art/img/Picasso,  Reservoir a horta de ebro, 1909 Cubisme Cézanien.jpg" alt="S">
+        <img src="/Art/img/El Ángelus (1859).jpg" alt="S">
+      </div>
+    </div>
+    <script>
+      const slide = document.querySelector('.slide');
+      const img = document.querySelectorAll ('.slide img');
+      let index = 0;
+
+      function show(i){
+        slide.style.transform = translateX(${-500 *i}px)`;
+      }
+
+      setInterval (()=>{
+        index = (index === img.lenth -1) ? 0: index + 1;
+        showSlide(index);
+      }, 300);
+      </script>
+
     <ul class="list">
         <h1>Дізнайтеся про стилі в образотворчому мистецтві:</h1>
             <li><a href="index.html"><p>Реалізм</p></a>
