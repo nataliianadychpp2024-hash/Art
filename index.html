@@ -129,18 +129,26 @@
     }
     .button{
       position: absolute;
-      top: 50%;
-      width: 100%;
-      display:flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 0 10px;
     }
     .button b{
-      background-color: #F9C9BD;
-      color: black;
-      cursor: pointer;
-      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background 0.3s;
     }
+    button b:hover {
+    background-color: rgba(0, 0, 0, 0.8);
     
   </style>
 </head>
