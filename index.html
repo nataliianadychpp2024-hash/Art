@@ -185,27 +185,32 @@
         <img src="/Art/img/El Ángelus (1859).jpg" alt="S">
       </div>
     </div>
+    <div class="button">
+        <button id="попередня"><b>Previous</b></button>
+        <button id="наступна"><b>Next</b></button>
+    </div>
+  </div>
     <script>
       const slide = document.querySelector('.slide');
       const img = document.querySelectorAll ('.slide img');
-      const pB = document.querySelectorById ('попередня');
-      const nB = document.querySelectorById ('наступна');
+      const pB = document.getElementById ('попередня');
+      const nB = document.getElementById ('наступна');
       let index = 0;
 
       function showSlide(i){
         slide.style.transform = `translateX(${-500 *i}px)`;
       }
       pB.addEventListener('click', () => {
-        index = (index === 0) ?  images.length -1 : index -1;
+        index = (index === 0) ?  images.length -1 : index +1;
         showSlide(index);   
       })
       nB.addEventListener('click', () => {
-        index = (index === 0) ?  images.length -1 : index -1;
+        index = (index === 0) ?  images.length -1 : index +1;
         showSlide(index);
       })
 
       setInterval (()=>{
-        index = (index === img.lenth -1) ? 0: index + 1;
+        index = (index === img.length -1) ? 0: index + 1;
         showSlide(index);
       }, 3000);
       </script>
