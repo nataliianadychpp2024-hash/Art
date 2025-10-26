@@ -83,72 +83,34 @@
 
     .img {
       align-items: center;
-      height: 150px;
-      width: 3100px;
+      height: auto;
+      width: 200px;
       flex: 1;
       margin-bottom: 15px;
       display: block;
     }
 
     .list{
-        list-style:none;
-        margin-bottom: 15px;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
     }
     .list li{
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 15px;
+      text-align: center;
     }
+    .list a {
+      display: block;
+      font-weight: bold;
+      text-decoration: none;
+      margin-bottom: 10px;
+}
     
 
     @keyframes fadeUp {
       from {opacity: 0; transform: translateY(20px);}
       to {opacity: 1; transform: translateY(0);}
     }
-
-    .kar {
-      position: relative;
-      width:500;
-      height: 300;
-      overflow: hidden;
-      margin: 50px;
-      border:3px solid #333;
-      border-radius: 15px;
-    }
-    .slide {
-      width: 100%;
-      height: 100%;
-      display:flex;
-      transition: transform 1s ease-in-out;
-    }
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .button{
-      position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 10;
-    padding: 0 10px;
-    }
-    .button b{
-      background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 18px;
-    transition: background 0.3s;
-    }
-    button b:hover {
-    background-color: rgba(0, 0, 0, 0.8);
     
   </style>
 </head>
@@ -178,54 +140,21 @@
         <img src="/Art/img/Spring (Alphonse Mucha, 1896).jpg" alt="Spring (Alphonse Mucha, 1896)">
       </div>
     </div>
-    <div class="kar">
-      <div classs="slide">
-        <img src="/Art/img/Monet Water Lilies.jpg" alt="S">
-        <img src="/Art/img/Picasso,  Reservoir a horta de ebro, 1909 Cubisme Cézanien.jpg" alt="S">
-        <img src="/Art/img/El Ángelus (1859).jpg" alt="S">
-      </div>
-    </div>
-    <div class="button">
-        <button id="попередня"><b>Previous</b></button>
-        <button id="наступна"><b>Next</b></button>
-    </div>
-    <script>
-      const slide = document.querySelector('.slide');
-      const img = document.querySelectorAll ('.slide img');
-      const pB = document.getElementById ('попередня');
-      const nB = document.getElementById ('наступна');
-      let index = 0;
 
-      function showSlide(i){
-        slide.style.transform = `translateX(${-500 *i}px)`;
-      }
-      pB.addEventListener('click', () => {
-        index = (index === 0) ?  images.length -1 : index +1;
-        showSlide(index);   
-      })
-      nB.addEventListener('click', () => {
-        index = (index === 0) ?  images.length -1 : index +1;
-        showSlide(index);
-      })
-
-      setInterval (()=>{
-        index = (index === img.length -1) ? 0: index + 1;
-        showSlide(index);
-      }, 3000);
-      </script>
-
+    <h1>Дізнайтеся про стилі в образотворчому мистецтві:</h1>
     <ul class="list">
-        <h1>Дізнайтеся про стилі в образотворчому мистецтві:</h1>
-            <li><a href="index.html"><p>Реалізм</p></a>
-                <div class="img"><img src="/Art/img/El Ángelus (1859).jpg" alt="El Ángelus (1859)"></div>
+            <li>
+              <a href="index.html">Реалізм</a>
+              <div class="img"><img src="/Art/img/El Ángelus (1859).jpg" alt="El Ángelus (1859)"></div>
             </li>            
-            <li><a href="index.html"><p>Імпресіонізм</p></a>
-            <div class="img"><img src="/Art/img/Monet Water Lilies.jpg" alt="Monet Water Lilies"></div>
+            <li>
+              <a href="index.html">Імпресіонізм</a>
+              <div class="img"><img src="/Art/img/Monet Water Lilies.jpg" alt="Monet Water Lilies"></div>
             </li>
-            <li><a href="index.html"><p>Кубізм</p></a>
-            <div class="img"><img src="/Art/img/Picasso,  Reservoir a horta de ebro, 1909 Cubisme Cézanien.jpg" alt="Picasso,  Reservoir a horta de ebro, 1909 Cubisme Cézanien"></div>
+            <li>
+              <a href="index.html">Кубізм</a>
+              <div class="img"><img src="/Art/img/Picasso,  Reservoir a horta de ebro, 1909 Cubisme Cézanien.jpg" alt="Picasso,  Reservoir a horta de ebro, 1909 Cubisme Cézanien"></div>
             </li>
-        
     </ul> 
     <img src="/Art/img/квітка 2.png" alt="квітка">
   </main>
