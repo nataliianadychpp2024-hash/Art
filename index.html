@@ -83,11 +83,12 @@
 
     .img {
       align-items: center;
-      height: 360px;
-      width: 580px;
+      height: 260px;
+      width: 480px;
       flex: 1;
       margin-bottom: 5px;
       display: block;
+	  margin-right: 20px;
     }
 
 .list{
@@ -115,13 +116,14 @@
     margin-left: 10;
     display: flex;
     align-items: right;
-  max-height: 0;                
-  overflow: hidden;           
-  transition: max-height 0.6s ease; 
+  	max-height: 0;                
+  	overflow: hidden;           
+  	transition: max-height 0.6s ease; 
 }
 
 #hiddenText.active {
-  max-height: 200px;           
+  max-height: 200px;
+  max-width: 160;
 }
     
 
@@ -164,11 +166,28 @@
 	<li><a href="index.html"><p>Реалізм</p></a></li>
     <li><div class="img"><img src="/Art/img/El Ángelus (1859).jpg" alt="El Ángelus (1859)"></div><button id="toggleBtn">Більше</button>
   <div id="hiddenText" class="hidden">
-  <p>
-    Реалізм, який зародився в 19 столітті, продовжує залишатися однією з найбільш впливових і багатогранних течій у сучасному мистецтві. Спочатку цей стиль виник як реакція на романтизм, пропонуючи більш об'єктивне та правдиве відображення дійсності, проте з часом реалізм розвивався, пристосовуючись до нових технологій та змін у суспільстві.
+  <p>Реалізм, який зародився в 19 столітті, продовжує залишатися однією з найбільш впливових і багатогранних течій у сучасному мистецтві. Спочатку цей стиль виник як реакція на романтизм, пропонуючи більш об'єктивне та правдиве відображення дійсності, проте з часом реалізм розвивався, пристосовуючись до нових технологій та змін у суспільстві.
   </p></li>
     </ul>
-    
+	  <ul class="list">
+	<li><a href="index.html"><p>Кубізм</p></a></li>
+    <li><div class="img"><img src="/Art/img/Picasso,  Reservoir a horta de ebro, 1909 Cubisme Cézanien.jpg" alt="Picasso,  Reservoir a horta de ebro, 1909 Cubisme Cézanien"></div><button id="toggleBtn">Більше</button>
+  <div id="hiddenText" class="hidden">
+  <p>Авангардний мистецький напрям початку XX століття, який характеризується розбиттям об’єктів на геометричні форми та зображенням їх з багатьох точок зору одночасно. Його започаткували Пабло Пікассо та Жорж Брак, а сам термін, що походить від французького «cube» (куб), запровадив мистецтвознавець Луї Воксель.
+  </p></li>
+    </ul>
+	  <ul class="list">
+	<li><a href="index.html"><p>Сюрреалізм</p></a></li>
+    <li><div class="img"><img src="/Art/img/Surrealism in the Art of Dali.jpg" alt="Surrealism in the Art of Dali"></div><button id="toggleBtn">Більше</button>
+  <div id="hiddenText" class="hidden">
+  <p>Напрям у мистецтві XX століття, якому властиві звернення до підсвідомих образів, звільнення від панування раціонального мислення, використання оптичних ілюзій та парадоксальне поєднання форм.
+  </p></li>
+    </ul>
+    <footer>
+	<div class="footer-img">
+    	<img src="/img/квітка 2.png" alt="квітка">
+    </div>
+	</footer>
   </main>
   
 <script>
