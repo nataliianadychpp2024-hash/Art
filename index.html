@@ -8,6 +8,11 @@
 	
   <link rel="icon" href="/Art/img/фавіконка.png" type="image/png">
   <style>
+	@font-face {
+		font famiy:'brave_hunter';
+		scr: url('fonts/brave_hunter');
+		
+		
 	}
 	  
     body {
@@ -20,6 +25,7 @@
     }
 
     h1 {
+	  font-family: brave_hunter;
       font-size: 52px;
       opacity: 0;
       transform: translateY(20px);
@@ -92,8 +98,21 @@
       margin-bottom: 15px;
       flex:1;
     }
+
+	.list{
+        list-style: none;
+  		padding: 0;
+  		margin: 0;
+        display: flex;
+		gap: 10px;          
+  		flex-wrap: wrap;
+    }
+	.list li{
+		display: flex;       
+  		align-items: center;   
+    }
     
-	.footer {
+.footer {
 	text-align: center;
 	padding: 3;
 	background color: DarkSalmon;
@@ -103,8 +122,8 @@
 		flex:1;
 	}
     .footer-img img {
-      height: 140px;
-      width: 100px;
+      height: 120px;
+      width: 80px;
       margin-bottom: 15px;
       flex:1;
 
@@ -126,7 +145,18 @@
       from {opacity: 0; transform: translateY(20px);}
       to {opacity: 1; transform: translateY(0);}
     }
-	
+	.bounce{
+		width: 150;
+		animation: jump 2s ease-in-out infinite;
+	}
+	  @keyframes jump{
+		  0%, 100%{
+			  transform: translateY(0);
+		  }
+		  50% {
+			  transform: translateY(-20px)
+		  }
+	  }
     
   </style>
 </head>
@@ -176,13 +206,10 @@
    
     <footer>
 	<div class="footer-img">
-		
-    	<img  src="/Art/img/квітка 2.png" alt="квітка">
-		
+    	<img src="/Art/img/квітка 2.png" alt="квітка" class="bounce">
     </div>
 	<p> Створила: Надич Наталія <br>
 		Соцмережі:<br>
-		<img src="/Art/img/camera-svgrepo-com.svg" alt="inst">
 		<a href="https://www.instagram.com/">Інстаграм</a> <br>
 		<a href="https://www.facebook.com/?locale=uk_UA">Фейсбук</a><br>
 	</p>
@@ -201,8 +228,6 @@
     : 'Більше';
 });
   </script>
-
-	
 
 </body>
 </html>
