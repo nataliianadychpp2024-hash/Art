@@ -157,9 +157,6 @@
 			  transform: translateY(-20px)
 		  }
 	  }
-		svg{
-			transition: transform 0.5s ease, opacity 0.5s ease;
-		}
     
   </style>
 </head>
@@ -235,17 +232,7 @@
 });
   </script>
 
-	<script>
-		const img = document.getElementById('AnimateImg');
-		let angle = 0;
-
-		function animate (){
-			angle += 0.05;
-			const y = Math.cos(anglt *1.5) * 100
-			img.style.transform = `translate ${y}px) scale(${scale})`;
-			requestAnimationFrame(animate);
-		}
-	</script>
+	
 
 </body>
 </html>
