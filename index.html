@@ -157,6 +157,9 @@
 			  transform: translateY(-20px)
 		  }
 	  }
+		svg{
+			transition: transform 0.5s ease, opacity 0.5s ease;
+		}
     
   </style>
 </head>
@@ -206,10 +209,11 @@
    
     <footer>
 	<div class="footer-img">
-    	<img src="/Art/img/квітка 2.png" alt="квітка" class="bounce">
+    	<img id="AnimateImg" src="/Art/img/квітка 2.png" alt="квітка" class="bounce">
     </div>
 	<p> Створила: Надич Наталія <br>
 		Соцмережі:<br>
+		<svg><img src="/Art/img/camera-svgrepo-com.svg" alt="inst"></svg>
 		<a href="https://www.instagram.com/">Інстаграм</a> <br>
 		<a href="https://www.facebook.com/?locale=uk_UA">Фейсбук</a><br>
 	</p>
@@ -228,6 +232,18 @@
     : 'Більше';
 });
   </script>
+
+	<script>
+		const img = document.getElementById("AnimateImg");
+		let angle = 0;
+
+		function animate (){
+			angle += 0.05;
+			const y = Math.cos(anglt *1.5) * 100
+			img.style.transform = `tramslate(${x}px, ${y}px) scale(${scale})`;
+			requestAnimationFrame(animate);
+		}
+	</script>
 
 </body>
 </html>
