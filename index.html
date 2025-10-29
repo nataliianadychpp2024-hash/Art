@@ -192,7 +192,7 @@
 					прагнення подрібнити об'єкти на стереометричні складові.
 	  			</p>
 	  		</div>
-	  <div class="art-block">
+	  
 	  <a href="index.html"><p>Сюрреалізм</p></a>
 			<div class="standart-img">
 				<img src="/Art/img/Surrealism in the Art of Dali.jpg" alt="Surrealism in the Art of Dali">
@@ -207,8 +207,6 @@
 					автоматизмом".
 	  			</p>
 	  		</div>
-		  </div>
-	
     <footer>
 	<div class="standart-img">
     	<img src="/Art/img/квітка 2.png" alt="квітка">
@@ -223,8 +221,7 @@
   </main>
   
 <script>
- 	const btn = document.querySelectorAll('.toggleBtn');
-
+ 	const buttons = document.querySelectorAll('.toggleBtn');
 	buttons.forEach(button => {
     button.addEventListener('click', () => {
       const text = button.nextElementSibling;
@@ -232,7 +229,6 @@
       button.textContent = text.classList.contains('active') ? 'Сховати' : 'Більше';
     });
   })
-});
   </script>
 </body>
 </html>
