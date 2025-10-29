@@ -122,8 +122,8 @@
 		flex:1;
 	}
     .footer-img img {
-      height: 120px;
-      width: 80px;
+      height: 140px;
+      width: 100px;
       margin-bottom: 15px;
       flex:1;
 
@@ -209,11 +209,13 @@
    
     <footer>
 	<div class="footer-img">
-    	<img id="AnimateImg" src="/Art/img/квітка 2.png" alt="квітка" class="bounce">
+		
+    	<img  src="/Art/img/квітка 2.png" alt="квітка" class="bounce">
+		
     </div>
 	<p> Створила: Надич Наталія <br>
 		Соцмережі:<br>
-		<svg><img src="/Art/img/camera-svgrepo-com.svg" alt="inst"></svg>
+		<div class="svg"><img id="AnimateImg"src="/Art/img/camera-svgrepo-com.svg" alt="inst"></div>
 		<a href="https://www.instagram.com/">Інстаграм</a> <br>
 		<a href="https://www.facebook.com/?locale=uk_UA">Фейсбук</a><br>
 	</p>
@@ -234,7 +236,7 @@
   </script>
 
 	<script>
-		const img = document.getElementById("AnimateImg");
+		const img = document.getElementById('AnimateImg');
 		let angle = 0;
 
 		function animate (){
