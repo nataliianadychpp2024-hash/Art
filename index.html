@@ -110,13 +110,7 @@
 	background color: DarkSalmon;
 	color: white;
 	}
-.footer-img {
-	width: 25px;
-	height: 25px;     
-  	align-items: center;
-	gap: 10px;
-}
-    
+
     #hiddenText {
     margin-left: 10;
     display: flex;
@@ -170,8 +164,8 @@
 			<div class="standart-img">
 				<img src="/Art/img/El Ángelus (1859).jpg" alt="El Ángelus (1859)">
 			</div>
-	  		<button id="toggleBtn">Більше</button>
-	  		<div id="hiddenText" class="hidden">
+	  		<button class="toggleBtn">Більше</button>
+	  		<div class="hiddenText" class="hidden">
 	  			<p>
 					Реалізм, який зародився в 19 столітті, продовжує залишатися однією з найбільш 
 					впливових і багатогранних течій у сучасному мистецтві. Спочатку цей стиль виник 
@@ -180,24 +174,26 @@
 					та змін у суспільстві.
 	  			</p>
 	  		</div>
+	  
     <a href="index.html"><p>Кубізм</p></a>
 			<div class="standart-img">
 				<img src="/Art/img/Picasso,  Reservoir a horta de ebro, 1909 Cubisme Cézanien.jpg" alt="Picasso,  Reservoir a horta de ebro, 1909 Cubisme Cézanien">
 			</div>
-	  		<button id="toggleBtn">Більше</button>
-	  		<div id="hiddenText" class="hidden">
+	  		<button class="toggleBtn">Більше</button>
+	  		<div class="hiddenText" class="hidden">
 	  			<p>
 					Авангардна течія в образотворчому мистецтві початку XX століття, яка передувала 
 					абстрактному мистецтву. Кубізму притаманні підкреслено геометризовані форми, 
 					прагнення подрібнити об'єкти на стереометричні складові.
 	  			</p>
 	  		</div>
+	  
 	  <a href="index.html"><p>Сюрреалізм</p></a>
 			<div class="standart-img">
 				<img src="/Art/img/Surrealism in the Art of Dali.jpg" alt="Surrealism in the Art of Dali">
 			</div>
-	  		<button id="toggleBtn">Більше</button>
-	  		<div id="hiddenText" class="hidden">
+	  		<button class="toggleBtn">Більше</button>
+	  		<div class="hiddenText" class="hidden">
 	  			<p>
 					Сюрреалізм — це авангардний художній напрям XX століття, що виник у 1920-х роках 
 					у Франції, який звертається до підсвідомості, снів та ірраціонального, звільняючи
@@ -208,7 +204,7 @@
 	  		</div>
 	
     <footer>
-	<div class="footer-img">
+	<div class="standart-img">
     	<img src="/Art/img/квітка 2.png" alt="квітка">
     </div>
 	<p> Створила: Надич Наталія <br>
@@ -221,14 +217,15 @@
   </main>
   
 <script>
- 	const btn = document.getElementById('toggleBtn');
-	const text = document.getElementById('hiddenText');
+ 	const btn = document.querySelectorAll('.toggleBtn');
 
-	btn.addEventListener('click', () => {
-  		text.classList.toggle('active');
-  	btn.textContent = text.classList.contains('active') 
-    ? 'Сховати' 
-    : 'Більше';
+	buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const text = button.nextElementSibling;
+      text.classList.toggle('active');
+      button.textContent = text.classList.contains('active') ? 'Сховати' : 'Більше';
+    });
+  })
 });
   </script>
 </body>
